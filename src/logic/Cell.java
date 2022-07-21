@@ -14,4 +14,10 @@ public class Cell {
     public Cell doubledCell() {
         return new Cell(value * 2);
     }
+
+    public boolean equals(Object o) {
+        if (!(o instanceof Cell)) return false;
+        Cell cell = (Cell) o;
+        return cell.value == value;
+    }
 }
